@@ -1,2 +1,2 @@
-# playground
-Testing random things
+# boilerplate
+Personal Boilerplate for my pages
