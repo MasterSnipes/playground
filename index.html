@@ -6,15 +6,28 @@
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link rel="stylesheet" type="text/css" href="css/styles.css">
-      <title>Title</title>
+      <title>Playground</title>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <!-- Import Vue.js from a CDN host -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.min.js"></script>
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js"></script>
     </head>
 	   
     <body>
-    no chill
+    <div class="section black white-text z-depth-2">
+      <div class="container">
+        <h4>Playground</h4>
+      </div>
+    </div>
+    <div id="app" class="container input-field">
+    <h5>Names list</h5>
+   	<ul>
+      <li v-for="name in names">{{ name }}</li>
+    </ul>
+    <input v-model='newname' @keyup.enter='addname' placeholder="New Name">
+    <a class="btn black white-text waves-effect waves-light" v-on:click='addname'>Add to list</a>
+    </div>
     <script type="text/javascript" src="js/app.js"></script>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
